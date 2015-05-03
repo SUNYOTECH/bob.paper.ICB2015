@@ -65,12 +65,6 @@ setup(
     # Don't worry - You won't need adminstrative privileges when using buildout.
     install_requires=[
       'setuptools',
-      'bob.io.base',
-      'bob.core',
-      'bob.ip.base',
-      'bob.ip.color',
-      'bob.sp',
-      'bob.io.matlab',
       'facereclib',
       'antispoofing.evaluation',  # the evaluation of the spoofing attack
       'bob.palmvein',  # the evaluation of the spoofing attack
@@ -80,7 +74,6 @@ setup(
     # This defines a namespace package so that other projects can share this namespace.
     namespace_packages = [
       'bob',
-      'bob.paper'
     ],
 
     # Here, the entry points (resources) are registered.
@@ -96,13 +89,13 @@ setup(
 
     # Classifiers for PyPI
     classifiers = [
+      'Framework :: Bob',
       'Development Status :: 4 - Beta',
       'Intended Audience :: Science/Research',
       'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
       'Natural Language :: English',
-      'Programming Language :: Python :: 2.7',
+      'Programming Language :: Python',
       'Environment :: Console',
-      'Framework :: Buildout',
       'Topic :: Scientific/Engineering',
     ],
 )

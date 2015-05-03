@@ -6,6 +6,7 @@ logs
 replay
 *.db
 .installed.cfg
+dist
 parts
 develop-eggs
 bin
