@@ -75,7 +75,7 @@ It requires some command line options, which you can list using ``./bin/icb2015_
 Usually, the command line options have a long version (starting with ``--``) and a shortcut (starting with a single ``-``), here we use only the long versions:
 
 - ``--database``: Specify the name of the databases to run experiments on. (default: ``verapalm``).
-- ``--preprocessing``: Specify the image preprocessing to run; the preprocessors will automatically assigned to the according experiment. Possible value is ``palmvein-preprocessor.
+- ``--preprocessing``: Specify the image preprocessing to run; the preprocessors will automatically assigned to the according experiment. Possible value is ``palmvein-preprocessor``.
 - ``--features``: Specify the features to run the experimetns. By default, the feature selected is the 'lbp-linearbinarypatterns' local binary patterns - LBP.
 - ``--tool``: Specify the matcher to run the experimetns. By default, the match-lbp is selected.
 - ``--protocols``: Specify a list of protocols that you want to run. Possible values are ``NOM50`` and ``SpoofingAttack50``. By default, all protocols are used.
@@ -94,7 +94,7 @@ A commonly used command line sequence to execute the face recognition algorithm 
 
 1. Run the experiments on the VERA Palm database::
 
-    $ ./bin/icb2015_palmvein_NOMandSpoofingAttack.py -vv --database verapalm
+    $ ./bin/icb2015_palmvein_NOMandSpoofingAttack.py -vv --databases verapalm
 
 .. note::
   All output directories of the scripts will be automatically generated if they do not exist yet.
