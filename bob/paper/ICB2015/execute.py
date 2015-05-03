@@ -40,7 +40,7 @@ def command_line_arguments(command_line_parameters = None):
   parser.add_argument('-t', '--tool', default = ('match-lbp'),
       help = 'The matchers to run; the matcher selected is match-lbp for these experiments.')
 
-  parser.add_argument('-P', '--protocols', nargs='+', default = ('NOM50', 'SpoofingAttack50'),
+  parser.add_argument('-P', '--protocols', nargs='+', default = ('nom50', 'spoofingAttack50'),
       help = 'The protocols to run; the protocols will automatically assigned to the according database.')
 
   parser.add_argument('-q', '--dry-run', action = 'store_true',
@@ -75,18 +75,18 @@ def main(command_line_parameters = None):
   # iterate over all protocols ...
   for protocol in args.protocols:
     # ... that fit to the database
-    for preprocessing in args.preprocessing:
+    #for preprocessing in args.preprocessing:
       # collect the parameters that will be sent to the bin/fingerveinverify.py script,
       # which will finally execute the experiments
       parameters = ['./bin/palmveinverify.py',
                     '--database', args.database,
                     '--protocol', protocol,
-                    '--preprocessing', preprocessing,
+                    '--preprocessing', args.preprocessing,
                     '--features', args.features,
                     '--tool', args.tool,            
                     '--temp-directory', os.path.join(args.temp_directory, args.database),
                     '--result-directory', os.path.join(args.result_directory, args.database),
-                    '--sub-directory', protocol+'_'+preprocessing+'_'+args.features]
+                    '--sub-directory', protocol+'_'+args.preprocessing+'_'+args.features]
   
       # set the verbosity level
       if args.verbose:

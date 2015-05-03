@@ -94,7 +94,7 @@ A commonly used command line sequence to execute the face recognition algorithm 
 
 1. Run the experiments on the VERA Palm database::
 
-    $ ./bin/icb2015_palmvein_NOMandSpoofingAttack.py -vv --databases verapalm
+    $ ./bin/icb2015_palmvein_NOMandSpoofingAttack.py -vv --database verapalm
 
 .. note::
   All output directories of the scripts will be automatically generated if they do not exist yet.
