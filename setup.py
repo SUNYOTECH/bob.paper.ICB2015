@@ -59,6 +59,7 @@ setup(
     # The definition of what is provided by this package
     packages=find_packages(),
     include_package_data=True,
+    zip_safe = False,
 
     # This line defines which packages should be installed when you "install" this package.
     # All packages that are mentioned here, but are not installed on the current system will be installed locally and only visible to the scripts of this package.
