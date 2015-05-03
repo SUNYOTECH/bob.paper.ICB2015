@@ -9,7 +9,9 @@ replay
 parts
 develop-eggs
 bin
-src 
+src
+results
+temp
 eggs
 downloads
 lib
